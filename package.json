@@ -4,7 +4,9 @@
   "description": "Bombastic plugin: use your Swagger specs to serve your REST API with koa.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test --require co-mocha \"./test/**/*.spec.js\"",
+    "lint": "eslint .",
+    "prepublish": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,19 @@
   "bugs": {
     "url": "https://github.com/diosmosis/bombastic-serve-koa/issues"
   },
-  "homepage": "https://github.com/diosmosis/bombastic-serve-koa#readme"
+  "homepage": "https://github.com/diosmosis/bombastic-serve-koa#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "co-mocha": "^1.1.2",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "koa": "^1.2.0",
+    "mocha": "^2.5.3",
+    "request-promise": "^3.0.0",
+    "bombastic": "git+https://github.com/diosmosis/bombastic.git"
+  },
+  "dependencies": {
+    "koa-router": "^5.4.0"
+  }
 }
