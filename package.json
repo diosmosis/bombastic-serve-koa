@@ -31,12 +31,12 @@
     "eslint": "^2.11.1",
     "eslint-config-airbnb-base": "^3.0.1",
     "eslint-plugin-import": "^1.8.1",
-    "koa": "^1.2.0",
     "mocha": "^2.5.3",
     "request-promise": "^3.0.0",
     "bombastic": "git+https://github.com/diosmosis/bombastic.git"
   },
   "dependencies": {
+    "koa": "^1.2.0",
     "koa-router": "^5.4.0"
   }
 }
