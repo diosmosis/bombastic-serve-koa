@@ -4,7 +4,7 @@
   "description": "Bombastic plugin: use your Swagger specs to serve your REST API with koa.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test --require co-mocha \"./test/**/*.spec.js\"",
+    "test": "mocha --require co-mocha \"./test/**/*.spec.js\"",
     "lint": "eslint .",
     "prepublish": "npm run lint && npm test"
   },

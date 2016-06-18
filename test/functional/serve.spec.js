@@ -28,21 +28,21 @@ describe('serve-koa', function () {
     let response = yield request({
       method: 'get',
       uri: `${TEST_URL}/v1/pets`,
-      simple: false
+      simple: false,
     })
     expect(response).to.equal('getAll called')
 
     response = yield request({
       method: 'post',
       uri: `${TEST_URL}/v1/pets`,
-      simple: false
+      simple: false,
     })
     expect(response).to.equal('create called')
 
     response = yield request({
       method: 'get',
       uri: `${TEST_URL}/v1/pets/123`,
-      simple: false
+      simple: false,
     })
     expect(response).to.equal('get called')
   })
