@@ -1,8 +1,10 @@
 module.exports = {
   extends: "airbnb-base",
   plugins: [],
+  parser: 'babel-eslint',
   parserOptions: {
-    sourceType: 'script'
+    sourceType: 'module',
+    allowImportExportEverywhere: false,
   },
   rules: {
     semi: [2, "never"],

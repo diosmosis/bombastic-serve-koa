@@ -1,5 +1,3 @@
-'use strict'
-
 const path = require('path')
 const expect = require('chai').expect
 const request = require('request-promise')
@@ -17,29 +15,29 @@ describe('serve-koa', function () {
   })
 
   let server
-  beforeEach(function* () {
-    server = yield serveKoa(app)
+  beforeEach(async function () {
+    server = await serveKoa(app)
   })
   afterEach(function () {
     server.close()
   })
 
-  it('should expose swagger routes correctly', function * () {
-    let response = yield request({
+  it('should expose swagger routes correctly', async function () {
+    let response = await request({
       method: 'get',
       uri: `${TEST_URL}/v1/pets`,
       simple: false,
     })
     expect(response).to.equal('getAll called')
 
-    response = yield request({
+    response = await request({
       method: 'post',
       uri: `${TEST_URL}/v1/pets`,
       simple: false,
     })
     expect(response).to.equal('create called')
 
-    response = yield request({
+    response = await request({
       method: 'get',
       uri: `${TEST_URL}/v1/pets/123`,
       simple: false,
