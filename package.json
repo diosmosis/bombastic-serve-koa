@@ -51,7 +51,7 @@
     "babel-plugin-transform-es2015-typeof-symbol": "^6.8.0",
     "babel-plugin-transform-es2015-unicode-regex": "^6.11.0",
     "babel-register": "^6.11.6",
-    "bombastic": "git+https://github.com/diosmosis/bombastic.git",
+    "bombastic": "0.1.2",
     "chai": "^3.5.0",
     "eslint": "^2.11.1",
     "eslint-config-airbnb-base": "^3.0.1",
