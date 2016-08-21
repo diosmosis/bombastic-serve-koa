@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register \"./test/**/*.spec.js\"",
     "lint": "eslint .",
-    "prepublish": "npm run lint && npm test"
+    "build": "babel lib --out-dir dist",
+    "prepublish": "npm run build && npm prune"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/diosmosis/bombastic-serve-koa#readme",
   "devDependencies": {
+    "babel-cli": "^6.11.4",
     "babel-eslint": "^6.1.2",
     "babel-plugin-check-es2015-constants": "^6.8.0",
     "babel-plugin-transform-async-to-generator": "^6.8.0",

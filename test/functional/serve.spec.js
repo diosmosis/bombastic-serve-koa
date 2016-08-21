@@ -2,7 +2,7 @@ const path = require('path')
 const expect = require('chai').expect
 const request = require('request-promise')
 const Bombastic = require('bombastic').Bombastic
-const serveKoa = require('../../lib')
+const serveKoa = require('../..')
 
 const TEST_PROJECT_PATH = path.join(__dirname, '../app')
 const TEST_URL = 'http://localhost:3000'
